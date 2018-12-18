@@ -145,3 +145,38 @@ header a:hover {
 }
 
 /* Header End */
+
+/* Sign Up Start*/
+
+#sign-up .box-left {
+    width: 45%;
+    float: left;
+    margin: 20 auto;
+   
+}
+
+img{
+    margin-left: -25px;
+}
+
+#sign-up .box-right {
+    width: 50%;
+    float: right;
+    overflow: hidden;
+}
+
+#sign-up label {
+    margin: 0 13px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#sign-up h1 {
+    text-align: center;
+}
+
+img{
+    margin-left: -25px;
+}
+
+/* Sign Up End */
