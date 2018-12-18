@@ -17,7 +17,7 @@ body {
 
 .card {
     width: 90%;
-    margin: 10px auto;
+    margin: 15px auto;
     overflow: hidden;
     padding: 20px;
 }
@@ -145,6 +145,18 @@ header a:hover {
 }
 
 /* Header End */
+
+/* Footer Start */
+
+footer {
+    padding: 20px;
+    margin-top: 80px;
+    background: #1433c4;
+    color: white;
+    text-align: center;
+}
+
+/* Footer End */
 
 /* Sign Up Start*/
 
