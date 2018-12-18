@@ -103,5 +103,45 @@ input:focus, button:focus, textarea:focus, select:focus {
     padding: 15px;
 }
 
-
 /* Globals End */
+
+/* Header Start */
+
+header {
+    background: #1433c4;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #logo {
+    float: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+}
+
+header a:hover {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Header End */
