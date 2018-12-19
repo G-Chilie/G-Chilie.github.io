@@ -258,6 +258,10 @@ img{
     font-weight: bold;
 }
 
+#list-questions a:hover{
+    background-color: #081d79;
+}
+
 #list-questions #upVote {
     color: rgb(25, 201, 25);
     margin: 0 3px;
