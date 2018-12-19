@@ -212,3 +212,85 @@ img{
 }
 
 /* Sign In End */
+
+/* List Questions Start */
+
+#list-questions #box-main{
+    float: left;
+    width: 65%;
+}
+
+#list-questions aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 70px;
+}
+
+#list-questions .list-item{
+    display: block;
+    margin: 3px 0 5px 0;
+    padding: 0;
+}
+
+#list-questions #list{
+    margin: 0;
+    padding: 0;
+}
+
+#list-questions h2 {
+    text-align: center;
+    color: #1433c4;
+    text-transform: uppercase;
+}
+
+#list-questions h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#list-questions h4 {
+    margin: 0;
+}
+
+#list-questions a {
+    text-decoration: none;
+    color: #1433c4;
+    font-weight: bold;
+}
+
+#list-questions a:hover{
+    background-color: #081d79;
+}
+
+#list-questions #upVote {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#list-questions #downVote {
+    color: red;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#list-questions #comment {
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#list-questions h1 {
+    text-align: center;
+}
+
+#list-questions .link-btn {
+    margin-top: 12px;
+    border-radius: 27px;
+    padding: 5px 25px;
+    padding-top: 12px;
+    height: 30px;
+    background: #1433c4;
+    color: white;
+}
+
+/* List Questions End */
