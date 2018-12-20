@@ -22,6 +22,18 @@ body {
     padding: 20px;
 }
 
+#box-main{
+    float: left;
+    width: 65%;
+    margin-top: 72px;
+}
+
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 70px;
+}
+
 .grid {
     margin-bottom: 0.5rem !important;
     -webkit-box-flex: 1;
@@ -33,7 +45,7 @@ body {
     -webkit-box-direction: normal;
     flex-direction: column;
     min-width: 0;
-    max-height: 15px;
+    max-height: 55px;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
@@ -41,8 +53,7 @@ body {
     border-radius: 0.25rem;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
+    -ms-flex-direction: column; 
 }
 
 .center-button {
@@ -78,7 +89,8 @@ input {
 }
 
 textarea {
-    margin: 30px auto;
+    width: 90%;
+    margin: 2px auto;
     border-radius: 4px;
     border: none;
     padding: 4px 15px;
@@ -165,20 +177,23 @@ footer {
 /* Sign Up Start*/
 
 #sign-up .box-left {
-    width: 45%;
+    width: 49%;
     float: left;
-    margin: 20 auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
    
 }
 
-img{
-    margin-left: -25px;
+#image-container{
+    margin-left: -47px;
 }
 
 #sign-up .box-right {
     width: 50%;
     float: right;
     overflow: hidden;
+    margin-top: 70px;
 }
 
 #sign-up label {
@@ -191,9 +206,6 @@ img{
     text-align: center;
 }
 
-img{
-    margin-left: -25px;
-}
 
 /* Sign Up End */
 
@@ -214,17 +226,6 @@ img{
 /* Sign In End */
 
 /* List Questions Start */
-
-#list-questions #box-main{
-    float: left;
-    width: 65%;
-}
-
-#list-questions aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 70px;
-}
 
 #list-questions .list-item{
     display: block;
@@ -368,7 +369,7 @@ img{
     text-transform: uppercase;
 }
 
-#profile #box-main{
+/* #profile #box-main{
     float: left;
     width: 65%;
     margin-top: 72px;
@@ -378,7 +379,7 @@ img{
     float: right;
     width: 30%;
     margin-top: 72px;
-}
+} */
 
 #profile .list-item{
     display: block;
@@ -438,18 +439,6 @@ img{
     text-transform: uppercase;
 }
 
-#admin #box-main{
-    float: left;
-    width: 65%;
-    margin-top: 72px;
-}
-
-#admin aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 12px;
-}
-
 
 #admin .list-item{
     display: block;
@@ -466,7 +455,6 @@ img{
 #admin select {
     width: 100%;
     display: block;
-    /* margin: 4px 32px; */
     height: 45px;
     padding: 4px 20px;
     border: 1px solid #E3E3E3;
@@ -476,3 +464,52 @@ img{
 }
 
 /* Admin End */
+
+/* medai queries */
+
+@media(max-width: 768px){
+
+
+    input,
+    textarea{
+        width: 100%;
+
+    }
+    
+    header nav, 
+    header li, 
+    header #logo,
+    #sign-up .box-left,
+    #sign-up .box-right,
+    #box-main,
+    aside#sidebar,
+    #ask-question .box-middle{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    aside#sidebar, #box-main{
+        margin-top: 0;
+    }
+
+    header li {
+        padding: 0 5px 0 5px;
+    }
+
+    header a{
+        font-size: 13px;
+    }
+
+    #sign-in .box-middle {
+        width: 100%;
+    }
+
+    #sign-up .box-left{
+        display: none;
+    }
+
+
+
+
+}
