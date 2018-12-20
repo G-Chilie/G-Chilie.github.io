@@ -76,6 +76,24 @@ aside#sidebar{
     background-color: #081d79;
 }
 
+.link-btn {
+    margin-top: 12px;
+    border-radius: 27px;
+    padding: 5px 25px;
+    padding-top: 12px;
+    height: 30px;
+    background: #1433c4;
+    color: white;
+    text-decoration: none;
+}
+
+.link-btn:hover{
+    background-color: #081d79;
+}
+
+#index_img{
+    width: 100%;
+}
 
 input {
     width: 90%;
@@ -166,10 +184,15 @@ header a:hover {
 
 footer {
     padding: 20px;
-    margin-top: 80px;
     background: #1433c4;
     color: white;
     text-align: center;
+}
+
+.fixed-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 /* Footer End */
@@ -505,8 +528,8 @@ footer {
         width: 100%;
     }
 
-    #sign-up .box-left{
-        display: none;
+    .fixed-footer{
+        position: relative;
     }
 
 
