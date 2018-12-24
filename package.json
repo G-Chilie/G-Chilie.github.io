@@ -4,8 +4,9 @@
   "description": "This is an application that crowd-source questions for a meetup. ​ Questioner​​ helps the meetup organizer prioritize questions to be answered. Other users can vote on asked questions and they bubble to the top or bottom of the log.",
   "main": "server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "start": "./node_modules/.bin/nodemon server.js",
+    "cover": "istanbul cover _mocha",
+    "test": "mocha",
+    "start": "./node_modules/.bin/nodemon",
     "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
@@ -21,9 +22,11 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.11.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9"
   },
