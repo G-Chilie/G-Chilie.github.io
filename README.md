@@ -3,4 +3,3 @@
  
  [![Build Status](https://travis-ci.org/G-Chilie/Questioner.svg?branch=develop)](https://travis-ci.org/G-Chilie/Questioner)
 [![Coverage Status](https://coveralls.io/repos/github/G-Chilie/Questioner/badge.svg?branch=develop)](https://coveralls.io/github/G-Chilie/Questioner?branch=develop)
-  q
