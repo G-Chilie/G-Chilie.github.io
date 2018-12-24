@@ -1,0 +1,33 @@
+{
+  "name": "questioner",
+  "version": "1.0.0",
+  "description": "This is an application that crowd-source questions for a meetup. ​ Questioner​​ helps the meetup organizer prioritize questions to be answered. Other users can vote on asked questions and they bubble to the top or bottom of the log.",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "start": "./node_modules/.bin/nodemon server.js",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Chilie/Questioner.git"
+  },
+  "author": "Chinwe okonkwo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Chilie/Questioner/issues"
+  },
+  "homepage": "https://github.com/G-Chilie/Questioner#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
