@@ -4,7 +4,7 @@ const { expect } = chai;
 
 describe('Fisrt Test', () => {
   it('should return a string', () => {
-    expect('ci test travis').to.equal('ci test travi');
+    expect('ci test travis').to.equal('ci test travis');
   });
   it('should return a number', () => {
     expect('ci test travis').to.equal('ci test travis');
