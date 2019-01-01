@@ -10,3 +10,16 @@ const getNewId = (array) => {
 
 const newDate = () => new Date().toString();
 
+const mustBeInArray = (array, id) => {
+    return new Promise((resolve, reject) => {
+      const row = array.find(r => r.id === id);
+      if (!row) {
+        reject({ // eslint-disable-line prefer-promise-reject-errors
+          status: 404,
+          message: `No meetup exits with id: ${id}`,
+        });
+      }
+      resolve(row);
+    });
+  }
+
