@@ -27,3 +27,9 @@ const writeJSONFile = (filename, content) => {
     fs.writeFileSync(filename, JSON.stringify(content));
   }
 
+const isInt = (id) => {
+    if (!Number.isInteger(parseInt(id, 10))) {
+      return false;
+    } return true;
+  }
+
