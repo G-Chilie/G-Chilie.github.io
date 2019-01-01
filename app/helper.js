@@ -23,3 +23,7 @@ const mustBeInArray = (array, id) => {
     });
   }
 
+const writeJSONFile = (filename, content) => {
+    fs.writeFileSync(filename, JSON.stringify(content));
+  }
+
