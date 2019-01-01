@@ -7,3 +7,6 @@ const getNewId = (array) => {
     return array[array.length - 1].id + 1;
   } return 1;
 };
+
+const newDate = () => new Date().toString();
+
