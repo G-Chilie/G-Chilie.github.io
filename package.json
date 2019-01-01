@@ -4,35 +4,42 @@
   "description": "This is an application that crowd-source questions for a meetup. ​ Questioner​​ helps the meetup organizer prioritize questions to be answered. Other users can vote on asked questions and they bubble to the top or bottom of the log.",
   "main": "server.js",
   "scripts": {
-    "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "test": "mocha",
-    "start": "./node_modules/.bin/nodemon",
-    "lint": "./node_modules/.bin/eslint ."
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha -- -R spec",
+    "test": "mocha ./test.js",
+    "lint": "eslint . --fix",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/G-Chilie/Questioner.git"
+    "url": "git+https://github.com/king-success/Questioner.git"
   },
-  "author": "Chinwe okonkwo",
-  "license": "ISC",
+  "author": "Kingsley Arinze",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/G-Chilie/Questioner/issues"
+    "url": "https://github.com/king-success/Questioner/issues"
   },
-  "homepage": "https://github.com/G-Chilie/Questioner#readme",
+  "engines": {
+    "node": "10.15.0"
+  },
+  "homepage": "https://github.com/king-success/Questioner#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
     "coveralls": "^3.0.2",
-    "eslint": "^5.11.0",
+    "eslint": "^5.10.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "nyc": "^13.1.0"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "winston": "^3.1.0"
   }
 }
