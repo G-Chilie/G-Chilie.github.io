@@ -30,3 +30,25 @@ router.post('/', async (req, res) => {
       });
   }
 });
+
+router.get('/:id', async (req, res) => {
+  const { id } = req.params;
+  await meetupModel.getMeetup(id)
+    .then(meetup => res.json({
+      status: 200,
+      data: [meetup],
+    }))
+    .catch((err) => {
+      if (err.status === 404) {
+        res.json({
+          status: err.status,
+          message: err.message,
+        });
+      } else {
+        res.json({
+          status: 500,
+          message: 'Internal server error',
+        });
+      }
+    });
+});
