@@ -49,5 +49,17 @@ describe('Meetup', () => { // eslint-disable-line on-undef
     });
   });
 
+  describe('GET /api/v1/meetups/upcoming', () => { // eslint-disable-line no-undef
+    it('should get all upcoming meetup record', (done) => { // eslint-disable-line no-undef
+      chai.request(app)
+        .get('/api/v1/meetups/upcoming')
+        .end((err, res) => {
+          res.status.should.equal(200);
+          res.body.status.should.equal(200);
+          res.body.should.be.a('object');
+          done();
+        });
+    });
+  });
 
 });
