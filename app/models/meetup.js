@@ -19,3 +19,11 @@ function insertMeetup(newMeetup) {
       resolve(meetup);
     });
   }
+
+  function getMeetup(id) {
+    return new Promise((resolve, reject) => {
+      helper.mustBeInArray(meetups, parseInt(id, 10))
+        .then(meetup => resolve(meetup))
+        .catch(err => reject(err));
+    });
+  }
