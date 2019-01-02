@@ -52,3 +52,15 @@ router.get('/:id', async (req, res) => {
       }
     });
 });
+
+router.get('/', async (req, res) => {
+  await meetupModel.getAllMeetups()
+    .then(meetups => res.json({
+      status: 200,
+      data: meetups,
+    }))
+    .catch(() => res.json({
+      status: 500,
+      error: 'Internal server error',
+    }));
+});
