@@ -28,6 +28,26 @@ function insertQuestion(newQuestion) {
   });
 }
 
+function upvoteQuestion(id, newQuestion) {
+    return new Promise((resolve, reject) => {
+      helper.mustBeInArray(questions, parseInt(id, 10))
+        .then((question) => {
+          const index = questions.findIndex(q => q.id === question.id);
+          const newId = { id: question.id };
+          const votes = { votes: question.votes + 1 };
+          const date = {
+            createdOn: question.createdOn,
+            updatedOn: helper.newDate(),
+          };
+          questions[index] = {
+            ...newId, ...date, ...newQuestion, ...votes,
+          };
+          helper.writeJSONFile(filename, questions);
+          resolve(questions[index]);
+        })
+        .catch(err => reject(err));
+    });
+  }
 module.exports = {
     insertQuestion,
   };
