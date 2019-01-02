@@ -64,3 +64,31 @@ router.get('/', async (req, res) => {
       error: 'Internal server error',
     }));
 });
+
+router.post('/:id/rsvps', async (req, res) => {
+  const { id } = req.params;
+  await meetupModel.rsvpMeetup(id)
+    .then((rsvp) => {
+      res.json({
+        status: 201,
+        data: [rsvp],
+      });
+    })
+    .catch((err) => {
+      if (err.status === 404) {
+        res.json({
+          status: err.status,
+          message: err.message,
+        });
+      } else {
+        res.json({
+          status: 500,
+          message: err,
+          data: [],
+        });
+      }
+    });
+});
+
+
+module.exports = router;

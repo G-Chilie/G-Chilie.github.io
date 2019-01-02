@@ -45,28 +45,31 @@ function insertMeetup(newMeetup) {
     });
   }
 
-  function checkFieldsPost(fields, required) {
-    for (const key of required) { // eslint-disable-line no-restricted-syntax
-      if (fields[key] === undefined || fields[key] === '') {
-        logger.info(`${key} is empty, validation failed`);
-        return {
-          status: 400,
-          message: `Validation failed, ${key} field cannot be empty`,
-        };
-      }
-    }
-    logger.info('All fields provided, validation successful');
-    return {
-      status: 200,
-      message: 'All fields ok',
-    };
+  function rsvpMeetup(meetupId) {
+    return new Promise((resolve, reject) => {
+      helper.mustBeInArray(meetups, parseInt(meetupId, 10))
+        .then((meetup) => {
+          const id = helper.getNewId(rsvps);
+          const title = meetup.topic;
+          const rsvpDefaults = {
+            meetup: meetupId,
+            user: 1,
+            respnse: 'Rsvp response',
+            status: 'Yes',
+          };
+          const rsvp = { id, title, ...rsvpDefaults };
+          rsvps.push(rsvp);
+          helper.writeJSONFile(jsonFilename, rsvps);
+          logger.info('Rsvp added successfully');
+          resolve(rsvp);
+        })
+        .catch(err => reject(err));
+    });
   }
-  
   module.exports = {
-    getNewId,
-    newDate,
-    mustBeInArray,
-    writeJSONFile,
-    isInt,
-    checkFieldsPost,
+    insertMeetup,
+    getAllMeetups,
+    getMeetup,
+    getUpcomingMeetups,
+    rsvpMeetup,
   };
