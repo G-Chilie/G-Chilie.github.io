@@ -8,6 +8,10 @@ const helper = require('../lib/helper.js');
 
 const logger = require('../lib/logger');
 
+const jsonFilename = path.join(__dirname, '../data/rsvp.json');
+
+const rsvps = require('../data/rsvp.json');
+
 function insertMeetup(newMeetup) {
     return new Promise((resolve) => {
       const id = helper.getNewId(meetups);
@@ -40,3 +44,32 @@ function insertMeetup(newMeetup) {
       resolve(meetups);
     });
   }
+
+  function rsvpMeetup(meetupId) {
+    return new Promise((resolve, reject) => {
+      helper.mustBeInArray(meetups, parseInt(meetupId, 10))
+        .then((meetup) => {
+          const id = helper.getNewId(rsvps);
+          const title = meetup.topic;
+          const rsvpDefaults = {
+            meetup: meetupId,
+            user: 1,
+            respnse: 'Rsvp response',
+            status: 'Yes',
+          };
+          const rsvp = { id, title, ...rsvpDefaults };
+          rsvps.push(rsvp);
+          helper.writeJSONFile(jsonFilename, rsvps);
+          logger.info('Rsvp added successfully');
+          resolve(rsvp);
+        })
+        .catch(err => reject(err));
+    });
+  }
+  module.exports = {
+    insertMeetup,
+    getAllMeetups,
+    getMeetup,
+    getUpcomingMeetups,
+    rsvpMeetup,
+  };
