@@ -112,4 +112,18 @@ describe('Meetup', () => { // eslint-disable-line on-undef
     });
   });
 
+  describe('POST /api/v1/meetups/:id/rsvps', () => { // eslint-disable-line no-undef
+    it('should create a new rsvp record', (done) => {
+      chai.request(app)
+        .post('/api/v1/meetups/1/rsvps')
+        .end((err, res) => {
+          res.status.should.equal(200);
+          res.body.status.should.equal(201);
+          res.body.should.be.a('object');
+          res.body.data.should.have.lengthOf(1);
+          done();
+        });
+    });
+  });
+
 });
