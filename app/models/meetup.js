@@ -27,3 +27,16 @@ function insertMeetup(newMeetup) {
         .catch(err => reject(err));
     });
   }
+
+  function getAllMeetups() { 
+    return new Promise((resolve) => {
+      if (meetups.length === 0) {
+        resolve({ // eslint-disable-line prefer-promise-reject-errors
+          status: 204,
+          data: [],
+        });
+        return;
+      }
+      resolve(meetups);
+    });
+  }
