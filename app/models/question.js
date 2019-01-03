@@ -4,8 +4,6 @@ const questions = require('../data/question.json');
 
 const helper = require('../lib/helper.js');
 
-const logger = require('../lib/logger');
-
 
 const filename = path.join(__dirname, '../data/question.json');
 
@@ -23,7 +21,6 @@ function insertQuestion(newQuestion) {
     };
     questions.push(question);
     helper.writeJSONFile(filename, questions);
-    // logger.info('Question added successfully');
     resolve(question);
   });
 }
@@ -49,7 +46,7 @@ function upvoteQuestion(id) {
   });
 }
 
-function downvoteQuestion(id, newQuestion) {
+function downvoteQuestion(id) {
   return new Promise((resolve, reject) => {
     helper.mustBeInArray(questions, parseInt(id, 10))
       .then((question) => {
