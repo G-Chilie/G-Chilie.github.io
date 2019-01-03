@@ -1,6 +1,6 @@
 const express = require('express');
 
-const questionModel = require('../models/question_model');
+const questionModel = require('../models/question');
 
 const helper = require('../lib/helper');
 
@@ -11,8 +11,8 @@ router.post('/', async (req, res) => {
   const validated = helper.checkFieldsPost(req.body, required);
   if (validated.status === 400) {
     res.json({
-      status: 400,
-      data: [],
+      status: validated.status,
+      message: validated.message,
     });
   } else {
     await questionModel.insertQuestion(req.body)
@@ -25,62 +25,44 @@ router.post('/', async (req, res) => {
       .catch(() => {
         res.json({
           status: 500,
-          data: [],
+          message: 'Internal server error',
         });
       });
   }
 });
 
 router.patch('/:id/upvote', async (req, res) => {
-    const required = ['createdBy', 'meetup', 'title', 'body'];
-    const { id } = req.params;
-    const validated = helper.checkFieldsPost(req.body, required);
-    if (validated.status === 400) {
+  const { id } = req.params;
+  await questionModel.upvoteQuestion(id)
+    .then((question) => {
       res.json({
-        status: 400,
-        data: [],
+        status: 201,
+        data: [question],
       });
-    } else {
-      await questionModel.upvoteQuestion(id, req.body)
-        .then((question) => {
-          res.json({
-            status: 201,
-            data: [question],
-          });
-        })
-        .catch(() => {
-          res.json({
-            status: 500,
-            data: [],
-          });
-        });
-    }
-  });
+    })
+    .catch(() => {
+      res.json({
+        status: 500,
+        data: 'Internal sever error',
+      });
+    });
+});
 
-  router.patch('/:id/downvote', async (req, res) => {
-    const required = ['createdBy', 'meetup', 'title', 'body'];
-    const { id } = req.params;
-    const validated = helper.checkFieldsPost(req.body, required);
-    if (validated.status === 400) {
+router.patch('/:id/downvote', async (req, res) => {
+  const { id } = req.params;
+  await questionModel.downvoteQuestion(id, req.body)
+    .then((question) => {
       res.json({
-        status: 400,
-        data: [],
+        status: 201,
+        data: [question],
       });
-    } else {
-      await questionModel.downvoteQuestion(id, req.body)
-        .then((question) => {
-          res.json({
-            status: 201,
-            data: [question],
-          });
-        })
-        .catch(() => {
-          res.json({
-            status: 500,
-            data: [],
-          });
-        });
-    }
-  });
-  
+    })
+    .catch(() => {
+      res.json({
+        status: 500,
+        message: 'Internal server error',
+      });
+    });
+});
+
 module.exports = router;

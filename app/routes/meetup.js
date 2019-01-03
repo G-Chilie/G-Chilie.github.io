@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
   if (validated.status === 400) {
     res.json({
       status: validated.status,
-      data: validated.message,
+      message: validated.message,
     });
   } else {
     await meetupModel.insertMeetup(req.body)
@@ -29,6 +29,27 @@ router.post('/', async (req, res) => {
         });
       });
   }
+});
+
+router.get('/upcoming', async (req, res) => {
+  await meetupModel.getUpcomingMeetups()
+    .then(meetups => res.json({
+      status: 200,
+      data: meetups,
+    }))
+    .catch((err) => {
+      if (err.status === 204) {
+        res.json({
+          status: err.status,
+          data: err.data,
+        });
+      } else {
+        res.json({
+          status: 500,
+          data: [],
+        });
+      }
+    });
 });
 
 router.get('/:id', async (req, res) => {
