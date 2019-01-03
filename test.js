@@ -6,7 +6,7 @@ const app = require('./server');
 chai.use(chaiHttp);
 chai.should();
 
-describe('Meetup', () => { // eslint-disable-line on-undef
+describe('Meetup', () => { // eslint-disable-line no-undef
   describe('GET /api/v1/meetups', () => { // eslint-disable-line no-undef
     it('should return all meetup record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
@@ -85,7 +85,7 @@ describe('Meetup', () => { // eslint-disable-line on-undef
     });
 
     fields.forEach((field) => {
-      it(`should return a validation error message if ${field} is undefined`, (done) => {
+      it(`should return a validation error message if ${field} is undefined`, (done) => { // eslint-disable-line no-undef
         const meetup = {
           title: 'ConcatenateConf',
           location: 'Yaba, Lagos',
@@ -109,7 +109,7 @@ describe('Meetup', () => { // eslint-disable-line on-undef
   });
 
   describe('POST /api/v1/meetups/:id/rsvps', () => { // eslint-disable-line no-undef
-    it('should create a new rsvp record', (done) => {
+    it('should create a new rsvp record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
         .post('/api/v1/meetups/1/rsvps')
         .end((err, res) => {
@@ -146,7 +146,7 @@ describe('Question', () => { // eslint-disable-line no-undef
     });
 
     fields.forEach((field) => {
-      it(`should return a validation error message if ${field} is undefined`, (done) => {
+      it(`should return a validation error message if ${field} is undefined`, (done) => { // eslint-disable-line no-undef
         const question = {
           createdBy: 1,
           meetup: 1,
@@ -168,7 +168,7 @@ describe('Question', () => { // eslint-disable-line no-undef
     });
   });
 
-  describe('PATCH /api/vi/questions/:id/upvote', () => {
+  describe('PATCH /api/vi/questions/:id/upvote', () => { // eslint-disable-line no-undef
     it('should upvote a question record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
         .patch('/api/v1/questions/2/upvote')
@@ -182,7 +182,7 @@ describe('Question', () => { // eslint-disable-line no-undef
     });
   });
 
-  describe('PATCH /api/vi/questions/:id/downvote', () => {
+  describe('PATCH /api/vi/questions/:id/downvote', () => { // eslint-disable-line no-undef
     it('should downvote a question record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
         .patch('/api/v1/questions/2/downvote')

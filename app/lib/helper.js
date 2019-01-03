@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-const logger = require('../lib/logger');
 
 const getNewId = (array) => {
   if (array.length > 0) {
@@ -34,14 +33,12 @@ const isInt = (id) => {
 function checkFieldsPost(fields, required) {
   for (const key of required) { // eslint-disable-line no-restricted-syntax
     if (fields[key] === undefined || fields[key] === '') {
-      // logger.info(`${key} is empty, validation failed`);
       return {
         status: 400,
         message: `Validation failed, ${key} field cannot be empty`,
       };
     }
   }
-  // logger.info('All fields provided, validation successful');
   return {
     status: 200,
     message: 'All fields ok',
