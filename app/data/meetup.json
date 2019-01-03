@@ -1,3 +1,446 @@
 [
-
+    {
+        "id": 1,
+        "createdOn": "Thu Jan 03 2019 07:49:38 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 2,
+        "createdOn": "Thu Jan 03 2019 07:52:13 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 3,
+        "createdOn": "Thu Jan 03 2019 07:52:58 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 4,
+        "createdOn": "Thu Jan 03 2019 07:54:10 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 5,
+        "createdOn": "Thu Jan 03 2019 07:57:24 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 6,
+        "createdOn": "Thu Jan 03 2019 07:58:22 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 7,
+        "createdOn": "Thu Jan 03 2019 08:06:30 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 8,
+        "createdOn": "Thu Jan 03 2019 08:09:09 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 9,
+        "createdOn": "Thu Jan 03 2019 08:10:05 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 10,
+        "createdOn": "Thu Jan 03 2019 08:11:04 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 11,
+        "createdOn": "Thu Jan 03 2019 08:11:49 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 12,
+        "createdOn": "Thu Jan 03 2019 08:16:54 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 13,
+        "createdOn": "Thu Jan 03 2019 08:17:33 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 14,
+        "createdOn": "Thu Jan 03 2019 08:21:12 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 15,
+        "createdOn": "Thu Jan 03 2019 08:21:36 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 16,
+        "createdOn": "Thu Jan 03 2019 08:22:51 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 17,
+        "createdOn": "Thu Jan 03 2019 08:34:20 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 18,
+        "createdOn": "Thu Jan 03 2019 08:34:48 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 19,
+        "createdOn": "Thu Jan 03 2019 08:36:34 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 20,
+        "createdOn": "Thu Jan 03 2019 08:37:06 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 21,
+        "createdOn": "Thu Jan 03 2019 08:37:59 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 22,
+        "createdOn": "Thu Jan 03 2019 08:39:52 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 23,
+        "createdOn": "Thu Jan 03 2019 08:41:39 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 24,
+        "createdOn": "Thu Jan 03 2019 08:42:20 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 25,
+        "createdOn": "Thu Jan 03 2019 08:43:07 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 26,
+        "createdOn": "Thu Jan 03 2019 08:43:20 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 27,
+        "createdOn": "Thu Jan 03 2019 08:43:46 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 28,
+        "createdOn": "Thu Jan 03 2019 08:45:19 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 29,
+        "createdOn": "Thu Jan 03 2019 08:46:01 GMT+0100 (WAT)",
+        "title": "ConcatenateConf",
+        "location": "Yaba, Lagos",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": [
+            "lorem",
+            "lorem"
+        ],
+        "images": [
+            "images1",
+            "images2"
+        ]
+    },
+    {
+        "id": 30,
+        "createdOn": "Thu Jan 03 2019 20:28:34 GMT+0100 (WAT)",
+        "title": "Meetup title",
+        "location": "Lagos, Nigeria",
+        "happeningOn": "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
+        "tags": "[\"Hello\", \"World\"]",
+        "images": "[\"image2\", \"image3\"]"
+    }
 ]

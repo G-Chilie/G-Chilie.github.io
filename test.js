@@ -66,13 +66,11 @@ describe('Meetup', () => { // eslint-disable-line on-undef
     const fields = ['title', 'location', 'happeningOn', 'tags', 'images'];
     it('should create a new meetup record', (done) => { // eslint-disable-line no-undef
       const meetup = {
-        id: 4,
-        createdOn: "Mon Dec 31 2018 20:28:47 GMT+0100 (WAT)",
-        title: "ConcatenateConf",
-        location: "Yaba, Lagos",
-        happeningOn: "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
-        tags: ["lorem", "lorem"],
-        images: ["images1", "images2"],
+        title: 'ConcatenateConf',
+        location: 'Yaba, Lagos',
+        happeningOn: 'Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)',
+        tags: ['lorem', 'lorem'],
+        images: ['images1', 'images2'],
       };
       chai.request(app)
         .post('/api/v1/meetups')
@@ -86,16 +84,14 @@ describe('Meetup', () => { // eslint-disable-line on-undef
         });
     });
 
-    fields.forEach(field => {
+    fields.forEach((field) => {
       it(`should return a validation error message if ${field} is undefined`, (done) => {
         const meetup = {
-          id: 4,
-          createdOn: "Mon Dec 31 2018 20:28:47 GMT+0100 (WAT)",
-          title: "ConcatenateConf",
-          location: "Yaba, Lagos",
-          happeningOn: "Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)",
-          tags: ["lorem", "lorem"],
-          images: ["images1", "images2"],
+          title: 'ConcatenateConf',
+          location: 'Yaba, Lagos',
+          happeningOn: 'Wed Dec 26 2018 08:18:30 GMT+0100 (WAT)',
+          tags: ['lorem', 'lorem'],
+          images: ['images1', 'images2'],
         };
         meetup[field] = undefined;
         chai.request(app)
@@ -107,7 +103,7 @@ describe('Meetup', () => { // eslint-disable-line on-undef
             res.body.should.be.a('object');
             res.body.should.have.property('message');
             done();
-          })
+          });
       });
     });
   });
@@ -125,9 +121,78 @@ describe('Meetup', () => { // eslint-disable-line on-undef
         });
     });
   });
-
 });
 
 describe('Question', () => { // eslint-disable-line no-undef
+  describe('POST /api/v1/questions', () => { // eslint-disable-line no-undef
+    const fields = ['createdBy', 'meetup', 'title', 'body'];
+    it('should create a new question record', (done) => { // eslint-disable-line no-undef
+      const question = {
+        createdBy: 1,
+        meetup: 1,
+        title: 'Test Question',
+        body: 'Test question body',
+      };
+      chai.request(app)
+        .post('/api/v1/questions')
+        .send(question)
+        .end((err, res) => {
+          res.status.should.equal(200);
+          res.body.status.should.equal(201);
+          res.body.should.be.a('object');
+          res.body.data.should.have.lengthOf(1);
+          done();
+        });
+    });
 
+    fields.forEach((field) => {
+      it(`should return a validation error message if ${field} is undefined`, (done) => {
+        const question = {
+          createdBy: 1,
+          meetup: 1,
+          title: 'Test Question',
+          body: 'Test question body',
+        };
+        question[field] = undefined;
+        chai.request(app)
+          .post('/api/v1/questions')
+          .send(question)
+          .end((err, res) => {
+            res.status.should.equal(200);
+            res.body.status.should.equal(400);
+            res.body.should.be.a('object');
+            res.body.should.have.property('message');
+            done();
+          });
+      });
+    });
+  });
+
+  describe('PATCH /api/vi/questions/:id/upvote', () => {
+    it('should upvote a question record', (done) => { // eslint-disable-line no-undef
+      chai.request(app)
+        .patch('/api/v1/questions/2/upvote')
+        .end((err, res) => {
+          res.status.should.equal(200);
+          res.body.status.should.equal(201);
+          res.body.should.be.a('object');
+          res.body.data.should.have.lengthOf(1);
+          done();
+        });
+    });
+  });
+
+  describe('PATCH /api/vi/questions/:id/downvote', () => {
+    it('should downvote a question record', (done) => { // eslint-disable-line no-undef
+      chai.request(app)
+        .patch('/api/v1/questions/2/downvote')
+        .end((err, res) => {
+          res.status.should.equal(200);
+          res.body.status.should.equal(201);
+          res.body.should.be.a('object');
+          res.body.data.should.have.lengthOf(1);
+          done();
+        });
+    });
+  });
 });

@@ -23,12 +23,12 @@ function insertQuestion(newQuestion) {
     };
     questions.push(question);
     helper.writeJSONFile(filename, questions);
-    logger.info('Question added successfully');
+    // logger.info('Question added successfully');
     resolve(question);
   });
 }
 
-function upvoteQuestion(id, newQuestion) {
+function upvoteQuestion(id) {
   return new Promise((resolve, reject) => {
     helper.mustBeInArray(questions, parseInt(id, 10))
       .then((question) => {
@@ -40,7 +40,7 @@ function upvoteQuestion(id, newQuestion) {
           updatedOn: helper.newDate(),
         };
         questions[index] = {
-          ...newId, ...date, ...newQuestion, ...votes,
+          ...newId, ...date, ...votes,
         };
         helper.writeJSONFile(filename, questions);
         resolve(questions[index]);
@@ -61,7 +61,7 @@ function downvoteQuestion(id, newQuestion) {
           updatedOn: helper.newDate(),
         };
         questions[index] = {
-          ...newId, ...date, ...newQuestion, ...votes,
+          ...newId, ...date, ...votes,
         };
         helper.writeJSONFile(filename, questions);
         resolve(questions[index]);

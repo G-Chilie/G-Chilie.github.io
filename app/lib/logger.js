@@ -20,7 +20,7 @@ const formatter = (entry) => {
   }
 
   return `${date} ${entry.level.toUpperCase()} ${message} ${context}`;
-}
+};
 
 /**
  * Generates the timestamp used by the log entries.
