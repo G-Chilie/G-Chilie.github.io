@@ -168,7 +168,7 @@ describe('Question', () => { // eslint-disable-line no-undef
     });
   });
 
-  describe('PATCH /api/vi/questions/:id/upvote', () => { // eslint-disable-line no-undef
+  describe('PATCH /api/v1/questions/:id/upvote', () => {
     it('should upvote a question record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
         .patch('/api/v1/questions/2/upvote')
@@ -182,7 +182,7 @@ describe('Question', () => { // eslint-disable-line no-undef
     });
   });
 
-  describe('PATCH /api/vi/questions/:id/downvote', () => { // eslint-disable-line no-undef
+  describe('PATCH /api/v1/questions/:id/downvote', () => {
     it('should downvote a question record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
         .patch('/api/v1/questions/2/downvote')
