@@ -23,7 +23,6 @@ function insertQuestion(newQuestion) {
     };
     questions.push(question);
     helper.writeJSONFile(filename, questions);
-    // logger.info('Question added successfully');
     resolve(question);
   });
 }

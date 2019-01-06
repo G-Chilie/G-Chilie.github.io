@@ -19,7 +19,6 @@ function insertMeetup(newMeetup) {
     const meetup = { id, createdOn, ...newMeetup };
     meetups.push(meetup);
     helper.writeJSONFile(filename, meetups);
-    // logger.info('Meetup added successfully');
     resolve(meetup);
   });
 }
@@ -80,7 +79,6 @@ function rsvpMeetup(meetupId) {
         const rsvp = { id, title, ...rsvpDefaults };
         rsvps.push(rsvp);
         helper.writeJSONFile(jsonFilename, rsvps);
-        // logger.info('Rsvp added successfully');
         resolve(rsvp);
       })
       .catch(err => reject(err));
