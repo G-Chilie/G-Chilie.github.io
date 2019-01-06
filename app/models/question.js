@@ -4,6 +4,8 @@ const questions = require('../data/question.json');
 
 const helper = require('../lib/helper.js');
 
+// const logger = require('../lib/logger');
+
 
 const filename = path.join(__dirname, '../data/question.json');
 
