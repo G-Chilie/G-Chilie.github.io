@@ -182,6 +182,20 @@ describe('Question', () => { // eslint-disable-line no-undef
     });
   });
 
+  describe('PATCH /api/v1/questions/:id/upvote', () => { // eslint-disable-line no-undef
+    it('should upvote a question record', (done) => { // eslint-disable-line no-undef
+      chai.request(app)
+        .patch('/api/v1/questions/2/upvote')
+        .end((err, res) => {
+          res.status.should.equal(200);
+          res.body.status.should.equal(201);
+          res.body.should.be.a('object');
+          res.body.data.should.have.lengthOf(1);
+          done();
+        });
+    });
+  });
+
   describe('PATCH /api/v1/questions/:id/downvote', () => { // eslint-disable-line no-undef
     it('should downvote a question record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
