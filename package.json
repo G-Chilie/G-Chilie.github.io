@@ -6,7 +6,7 @@
   "scripts": {
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha -- -R spec",
-    "test": "mocha ./test.js",
+    "test": "mocha test.js",
     "lint": "eslint . --fix",
     "dev": "nodemon server.js",
     "start": "node server.js"
@@ -40,6 +40,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "path": "^0.12.7",
+    "swagger-ui-express": "^4.0.2",
     "winston": "^3.1.0"
   }
 }
