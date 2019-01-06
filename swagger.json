@@ -5,7 +5,7 @@
     "description": "Questioner API",
     "version": "1.0.0"
   },
-  "host": "https://safe-temple-31857.herokuapp.com",
+  "host": "https://safe-chamber-62773.herokuapp.com",
   "schemes": [
     "https"
   ],

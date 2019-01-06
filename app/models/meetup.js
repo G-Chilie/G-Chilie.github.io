@@ -6,7 +6,7 @@ const meetups = require('../data/meetup.json');
 
 const helper = require('../lib/helper.js');
 
-const logger = require('../lib/logger');
+// const logger = require('../lib/logger');
 
 const jsonFilename = path.join(__dirname, '../data/rsvp.json');
 
