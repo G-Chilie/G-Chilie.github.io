@@ -50,7 +50,7 @@ router.patch('/:id/upvote', async (req, res) => {
 
 router.patch('/:id/downvote', async (req, res) => {
   const { id } = req.params;
-  await questionModel.downvoteQuestion(id, req.body)
+  await questionModel.downvoteQuestion(id)
     .then((question) => {
       res.json({
         status: 201,
