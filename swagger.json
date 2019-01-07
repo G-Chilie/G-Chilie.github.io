@@ -292,7 +292,7 @@
       }
     },
     "/questons/:id/upvote": {
-      "put": {
+      "patch": {
         "summary": "Upvotes a question",
         "description": "Upvotes a specified question using the id supplied through the route path",
         "tags": [
@@ -348,7 +348,7 @@
       }
     },
     "/questons/:id/downvote": {
-      "put": {
+      "patch": {
         "summary": "Downvotes a question",
         "description": "Downvotes a specified question using the id supplied through the route path",
         "tags": [
