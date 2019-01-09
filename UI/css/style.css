@@ -24,13 +24,13 @@ body {
 
 #box-main{
     float: left;
-    width: 65%;
+    width: 100%;
     margin-top: 72px;
 }
 
 aside#sidebar{
     float: right;
-    width: 30%;
+    width: 100%;
     margin-top: 70px;
 }
 
@@ -61,6 +61,7 @@ aside#sidebar{
 }
 
 .form-btn {
+    margin: 265px;
     height: 45px;
     background: #1433c4;
     border: 0;
@@ -96,7 +97,7 @@ aside#sidebar{
 }
 
 input {
-    width: 90%;
+    width: 60%;
     display: block;
     margin: 4px auto;
     height: 35px;
@@ -527,6 +528,9 @@ footer {
 
     #sign-in .box-middle {
         width: 100%;
+    }
+    .form-btn {
+        margin: 73px
     }
 
     .fixed-footer{
