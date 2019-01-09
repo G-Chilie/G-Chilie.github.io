@@ -16,7 +16,7 @@ body {
 }
 
 .card {
-    width: 90%;
+    width: 80%;
     margin: 15px auto;
     overflow: hidden;
     padding: 20px;
@@ -61,7 +61,7 @@ aside#sidebar{
 }
 
 .form-btn {
-    margin: 254px;
+    margin: 210px;
     height: 45px;
     background: #1433c4;
     border: 0;
@@ -74,8 +74,8 @@ aside#sidebar{
 }
 
 .form-bt {
-    margin: 472px;
-    height: 45px;
+    margin-right: 350px;
+    height: 47px;
     background: #1433c4;
     border: 0;
     padding-left: 40px;
@@ -251,7 +251,7 @@ footer {
 /* Sign In Start */
 
 #sign-in .box-middle {
-    width: 50%;
+    width: 60%;
     margin: 92px auto;
     overflow: hidden;
 }
