@@ -61,7 +61,7 @@ aside#sidebar{
 }
 
 .form-btn {
-    margin: 265px;
+    margin: 254px;
     height: 45px;
     background: #1433c4;
     border: 0;
@@ -72,6 +72,20 @@ aside#sidebar{
     border-radius: 25px;
     margin-top: 5px;
 }
+
+.form-bt {
+    margin: 472px;
+    height: 45px;
+    background: #1433c4;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
 
 .form-btn:hover{
     background-color: #081d79;
@@ -530,9 +544,11 @@ footer {
         width: 100%;
     }
     .form-btn {
-        margin: 73px
+        margin: 75px
     }
-
+    .form-bt {
+        margin: 75px
+    }
     .fixed-footer{
         position: relative;
         left: 0;
