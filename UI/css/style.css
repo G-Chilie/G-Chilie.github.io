@@ -16,15 +16,17 @@ body {
 }
 
 .card {
+    /* margin-left: 300px; */
     width: 90%;
-    margin: 15px auto;
-    overflow: hidden;
+    margin: 15px  ;
+    /* overflow: hidden; */
     padding: 20px;
+    align-self: center;
 }
 
 #box-main{
     float: left;
-    width: 65%;
+    width: 100%;
     margin-top: 72px;
 }
 
@@ -371,6 +373,11 @@ footer {
     font-weight: bold;
 }
 
+#profile #Join {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
 #profile #delete {
     color: red;
     margin: 0 3px;
@@ -416,6 +423,75 @@ footer {
     padding: 0;
 }
 /* Profile End */
+
+/* all meetups Start */
+
+#profile h4 {
+    margin: 0;
+}
+
+#profile a {
+    text-decoration: none;
+    color: #1433c4;
+    font-weight: bold;
+}
+
+#profile #questions {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#profile #Join {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
+#profile #delete {
+    color: red;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#profile #comment {
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#profile h2 {
+    text-align: center;
+    color: #1433c4;
+    text-transform: uppercase;
+}
+
+#profile h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* #profile #box-main{
+    float: left;
+    width: 65%;
+    margin-top: 72px;
+}
+
+#profile aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 72px;
+} */
+
+#profile .list-item{
+    display: block;
+    margin: 3px 0 5px 0;
+    padding: 0;
+}
+
+#profile #list{
+    margin: 0;
+    padding: 0;
+}
+/*all meetups End */
 
 /* Admin Start */
 
