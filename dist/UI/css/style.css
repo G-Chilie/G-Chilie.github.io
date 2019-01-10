@@ -1,0 +1,542 @@
+body {
+    background: #f3f0f0;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Globals Start */
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.card {
+    width: 90%;
+    margin: 15px auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#box-main{
+    float: left;
+    width: 65%;
+    margin-top: 72px;
+}
+
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 70px;
+}
+
+.grid {
+    margin-bottom: 0.5rem !important;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    max-height: 55px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -ms-flex-direction: column; 
+}
+
+.center-button {
+    text-align: center;
+}
+
+.form-btn {
+    height: 45px;
+    background: #1433c4;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
+.form-btn:hover{
+    background-color: #081d79;
+}
+
+.link-btn {
+    margin-top: 12px;
+    border-radius: 27px;
+    padding: 5px 25px;
+    padding-top: 12px;
+    height: 30px;
+    background: #1433c4;
+    color: white;
+    text-decoration: none;
+}
+
+.link-btn:hover{
+    background-color: #081d79;
+}
+
+#index_img{
+    width: 100%;
+}
+
+input {
+    width: 90%;
+    display: block;
+    margin: 4px auto;
+    height: 35px;
+    padding: 4px 15px;
+    border: 1px solid #E3E3E3;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    width: 90%;
+    margin: 2px auto;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 15px;
+    font-size: 15px;
+}
+
+input:focus, button:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-center{
+    text-align: center;
+}
+
+.blue{
+    background: #1433c4;
+    color:white;
+    padding: 15px;
+}
+
+/* Globals End */
+
+/* Header Start */
+
+header {
+    background: #1433c4;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #logo {
+    float: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+}
+
+header a:hover {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Header End */
+
+/* Footer Start */
+
+footer {
+    padding: 20px;
+    background: #1433c4;
+    color: white;
+    text-align: center;
+}
+
+.fixed-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer End */
+
+/* Sign Up Start*/
+
+#sign-up .box-left {
+    width: 49%;
+    float: left;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+   
+}
+
+#image-container{
+    margin-left: -47px;
+}
+
+#sign-up .box-right {
+    width: 50%;
+    float: right;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+#sign-up label {
+    margin: 0 13px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#sign-up h1 {
+    text-align: center;
+}
+
+
+/* Sign Up End */
+
+/* Sign In Start */
+
+#sign-in .box-middle {
+    width: 50%;
+    margin: 92px auto;
+    overflow: hidden;
+}
+
+#sign-in label {
+    margin: 0 13px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Sign In End */
+
+/* List Questions Start */
+
+#list-questions .list-item{
+    display: block;
+    margin: 3px 0 5px 0;
+    padding: 0;
+}
+
+#list-questions #list{
+    margin: 0;
+    padding: 0;
+}
+
+#list-questions h2 {
+    text-align: center;
+    color: #1433c4;
+    text-transform: uppercase;
+}
+
+#list-questions h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#list-questions h4 {
+    margin: 0;
+}
+
+#list-questions a {
+    text-decoration: none;
+    color: #1433c4;
+    font-weight: bold;
+}
+
+#list-questions a:hover{
+    background-color: #081d79;
+}
+
+#list-questions #upVote {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#list-questions #downVote {
+    color: red;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#list-questions #comment {
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#list-questions h1 {
+    text-align: center;
+}
+
+#list-questions .link-btn {
+    margin-top: 12px;
+    border-radius: 27px;
+    padding: 5px 25px;
+    padding-top: 12px;
+    height: 30px;
+    background: #1433c4;
+    color: white;
+}
+
+/* List Questions End */
+
+/* Ask Question Start*/
+
+#ask-question .box-middle {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#ask-question h1{
+    text-align: center;
+}
+
+#ask-question #comment-div{
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+
+#ask-question select {
+    width: 93%;
+    display: block;
+    margin: 4px 32px;
+    height: 45px;
+    padding: 4px 15px;
+    border: 1px solid #E3E3E3;
+    background: white;
+    border-radius: 60px;
+    font-size: 15px;
+}
+
+/* Ask Questions End */
+
+/* Profile Start */
+
+#profile h4 {
+    margin: 0;
+}
+
+#profile a {
+    text-decoration: none;
+    color: #1433c4;
+    font-weight: bold;
+}
+
+#profile #questions {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#profile #delete {
+    color: red;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#profile #comment {
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#profile h2 {
+    text-align: center;
+    color: #1433c4;
+    text-transform: uppercase;
+}
+
+#profile h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* #profile #box-main{
+    float: left;
+    width: 65%;
+    margin-top: 72px;
+}
+
+#profile aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 72px;
+} */
+
+#profile .list-item{
+    display: block;
+    margin: 3px 0 5px 0;
+    padding: 0;
+}
+
+#profile #list{
+    margin: 0;
+    padding: 0;
+}
+/* Profile End */
+
+/* Admin Start */
+
+#admin h4 {
+    margin: 0;
+}
+
+#admin a {
+    text-decoration: none;
+    color: #1433c4;
+    font-weight: bold;
+}
+
+#admin #questions {
+    color: rgb(25, 201, 25);
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#admin #delete {
+    color: red;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#admin #edit {
+    color: #1433c4;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#admin #comment {
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+#admin h2 {
+    text-align: center;
+    color: #1433c4;
+    text-transform: uppercase;
+}
+
+#admin h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+#admin .list-item{
+    display: block;
+    margin: 3px 0 5px 0;
+    padding: 0;
+}
+
+#admin #list{
+    margin: 0;
+    padding: 0;
+}
+
+
+#admin select {
+    width: 100%;
+    display: block;
+    height: 45px;
+    padding: 4px 20px;
+    border: 1px solid #E3E3E3;
+    background: white;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+/* Admin End */
+
+/* medai queries */
+
+@media(max-width: 768px){
+
+
+    input,
+    textarea{
+        width: 100%;
+
+    }
+    
+    header nav, 
+    header li, 
+    header #logo,
+    #sign-up .box-left,
+    #sign-up .box-right,
+    #box-main,
+    aside#sidebar,
+    #ask-question .box-middle{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    aside#sidebar, #box-main{
+        margin-top: 0;
+    }
+
+    header li {
+        padding: 0 5px 0 5px;
+    }
+
+    header a{
+        font-size: 13px;
+    }
+
+    #sign-in .box-middle {
+        width: 100%;
+    }
+
+    .fixed-footer{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: inherit;
+    }
+
+
+
+
+}
