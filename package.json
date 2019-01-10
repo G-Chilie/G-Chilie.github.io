@@ -2,14 +2,16 @@
   "name": "questioner",
   "version": "1.0.0",
   "description": "This is an application that crowd-source questions for a meetup. ​ Questioner​​ helps the meetup organizer prioritize questions to be answered. Other users can vote on asked questions and they bubble to the top or bottom of the log.",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha -- -R spec",
     "test": "mocha test.js",
     "lint": "eslint . --fix",
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/app.js",
+
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
   },
   "homepage": "https://github.com/king-success/Questioner#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
     "coveralls": "^3.0.2",
@@ -35,12 +39,15 @@
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.18.9",
-    "nyc": "^13.1.0"
+    "nyc": "^13.1.0",
+    "rimraf": "^2.6.3"
   },
   "dependencies": {
     "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "path": "^0.12.7",
     "swagger-ui-express": "^4.0.2",
     "winston": "^3.1.0"
-  }
+  },
+  "keywords": []
 }
