@@ -3,4 +3,4 @@ node_modules
 coverge/
 /error.log
 /package-lock.json
-
+ test/
