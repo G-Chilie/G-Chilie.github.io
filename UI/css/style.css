@@ -504,6 +504,15 @@ footer {
 
 /* Admin End */
 
+/* Meet Start */
+.meetup{
+    
+    flex-wrap:;
+    flex-direction: row;
+    display-flex:  
+}
+/* Meet End */
+
 /* medai queries */
 
 @media(max-width: 768px){
