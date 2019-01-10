@@ -10,7 +10,7 @@
     "lint": "eslint . --fix",
     "dev": "nodemon server.js",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build && node dist/app.js",
+    "start": "npm run build && node dist/app.js"
 
   },
   "repository": {
@@ -28,6 +28,8 @@
   "homepage": "https://github.com/G-Chilie/Questioner#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-destructuring":"^6.23.0",
+    "babel-plugin-transform-object-rest-spread":"^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
