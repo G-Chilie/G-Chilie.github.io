@@ -1,6 +1,9 @@
 node_modules
+dist
 /combined.log
 coverge/
 /error.log
 /package-lock.json
  test/
+dist/error.log
+dist/combined.log
