@@ -1,7 +1,6 @@
-const express = require('express');
-
-const meetupRoute = require('./meetup');
-const questionRoute = require('./question');
+import express from 'express';
+import meetupRoute from './meetup';
+import questionRoute from './question'
 
 const router = express.Router();
 
