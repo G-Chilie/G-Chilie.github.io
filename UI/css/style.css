@@ -1,3 +1,9 @@
+nav{
+display: flex;
+justify-content: space-between;
+    align-items: center;
+}
+ 
 body {
     background: #f3f0f0;
     font-size: 15px;
@@ -16,22 +22,23 @@ body {
 }
 
 .card {
-    width: 90%;
+    width: 70%;
     margin: 15px auto;
     overflow: hidden;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 #box-main{
-    float: left;
-    width: 65%;
-    margin-top: 72px;
+    width: 85%;
+    margin-left: 70px;
 }
 
 aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 70px;
+    
+    margin: 70px 100px 40px 190px;
+    width: 70%;
+    
+    
 }
 
 .grid {
@@ -70,6 +77,8 @@ aside#sidebar{
     font-size: 15px;
     border-radius: 25px;
     margin-top: 5px;
+    margin-left: 620px;
+
 }
 
 .form-btn:hover{
@@ -198,19 +207,74 @@ footer {
 
 /* Footer End */
 
+ /*STYLE MEETUP PAGE BEGIN*/
+
+ .meetup-link {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+
+.meetup-link:hover{
+    color: blue;
+}
+
+
+.meetup-list {
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.meetup-item {
+
+    display: flex;
+    align-content: center;
+    padding: 2% 0% 1% 2%;
+    margin: 0% 20% 1% 20%;
+    border: 3px solid rgba(0, 0, 0, 0.125);
+    min-width: max-content;}
+
+.meetup-image {
+    max-width: 282px;
+    min-width: 95px;
+    border-radius: 10%;
+    height: 169px;;
+}
+
+
+.info {
+   
+    padding: 10px 20px 0px 0px;
+    line-height: 4px;
+    margin: 0 0 0 85px;    
+    width: 46%;
+
+}
+
+hr.pipe {
+        margin: 15px 0 25px 30px;
+        border-color: rgba(0, 0, 0, 0.125);
+}
+
+ /*STYLE MEETUP PAGE END*/
+
 /* Sign Up Start*/
 
 #sign-up .box-left {
-    width: 49%;
+      width: 40%;
     float: left;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 69px;
+    margin-left: -45px;
    
 }
 
 #image-container{
-    margin-left: -47px;
+    margin-left:40px;
 }
 
 #sign-up .box-right {
@@ -354,6 +418,31 @@ footer {
 /* Ask Questions End */
 
 /* Profile Start */
+.photo-container {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.profile-pic {
+    width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+ 
+  align-items: center;
+}
+
+
+
+img.pic {
+    max-width: 200px;
+    min-width: 110px;
+    border-radius: 20%;
+   
+}
+
 
 #profile h4 {
     margin: 0;
@@ -491,7 +580,24 @@ footer {
 
 /* medai queries */
 
-@media(max-width: 768px){
+@media only screen and (max-width: 618px){
+    header nav, 
+    header li, 
+    header #logo,
+    #sign-up .box-left,
+    #sign-up .box-right,
+    #box-main,
+    aside#sidebar,
+    #ask-question .box-middle{
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
 
 
     input,
@@ -511,6 +617,7 @@ footer {
         float: none;
         text-align: center;
         width: 100%;
+        margin: 0 auto;
     }
 
     aside#sidebar, #box-main{
@@ -535,8 +642,27 @@ footer {
         bottom: 0;
         width: inherit;
     }
+    .meetupcard{
+        width: 100%;
+        margin: 15px auto;
+        overflow: hidden;
+        
+    }
+    
+    .container {
+        width: 100%;
+    }
 
-
-
-
+    .row1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    
+ .centralize{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 }

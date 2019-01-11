@@ -1,14 +1,14 @@
 // Import the dependencies for testing
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const app = require('./server');
+const app = require('./app');
 // Configure chai
 chai.use(chaiHttp);
 chai.should();
 
 describe('Meetup', () => { // eslint-disable-line no-undef
   describe('GET /api/v1/meetups', () => { // eslint-disable-line no-undef
-    it('should return all meetup record', (done) => { // eslint-disable-line no-undef
+    it.only('should return all meetup record', (done) => { // eslint-disable-line no-undef
       chai.request(app)
         .get('/api/v1/meetups')
         .end((err, res) => {
