@@ -1,9 +1,11 @@
-const express = require('express');
+import express from 'express';
+import {
+  insertQuestion,
+  upvoteQuestion,
+  downvoteQuestion
+} from '../models/question'
 
-const questionModel = require('../models/question');
-
-const helper = require('../lib/helper');
-
+import helper from '../lib/helper'
 const router = express.Router();
 
 router.post('/', async (req, res) => {
@@ -15,7 +17,7 @@ router.post('/', async (req, res) => {
       message: validated.message,
     });
   } else {
-    await questionModel.insertQuestion(req.body)
+    await insertQuestion(req.body)
       .then((question) => {
         res.json({
           status: 201,
@@ -33,7 +35,7 @@ router.post('/', async (req, res) => {
 
 router.patch('/:id/upvote', async (req, res) => {
   const { id } = req.params;
-  await questionModel.upvoteQuestion(id)
+  await upvoteQuestion(id)
     .then((question) => {
       res.json({
         status: 201,
@@ -50,7 +52,7 @@ router.patch('/:id/upvote', async (req, res) => {
 
 router.patch('/:id/downvote', async (req, res) => {
   const { id } = req.params;
-  await questionModel.downvoteQuestion(id)
+  await downvoteQuestion(id)
     .then((question) => {
       res.json({
         status: 201,

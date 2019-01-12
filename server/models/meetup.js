@@ -1,12 +1,11 @@
-const path = require('path');
+import path from 'path';
 
 const filename = path.join(__dirname, '../data/meetup.json');
 
-const meetups = require('../data/meetup.json');
+import meetups from '../data/meetup.json';
 
-const helper = require('../lib/helper.js');
+import helper from '../lib/helper.js';
 
-// const logger = require('../lib/logger');
 
 const jsonFilename = path.join(__dirname, '../data/rsvp.json');
 
@@ -84,7 +83,7 @@ function rsvpMeetup(meetupId) {
       .catch(err => reject(err));
   });
 }
-module.exports = {
+export {
   insertMeetup,
   getAllMeetups,
   getMeetup,

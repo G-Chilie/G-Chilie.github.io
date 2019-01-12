@@ -1,6 +1,6 @@
-const path = require('path');
+const path = require('path'); // inport path 'path'
 
-const questions = require('../data/question.json');
+const questions = require('../data/question.json'); // import from 
 
 const helper = require('../lib/helper.js');
 
@@ -10,7 +10,7 @@ const helper = require('../lib/helper.js');
 const filename = path.join(__dirname, '../data/question.json');
 
 
-function insertQuestion(newQuestion) {
+export function insertQuestion(newQuestion) {
   return new Promise((resolve) => {
     const id = helper.getNewId(questions);
     const createdOn = helper.newDate();
@@ -27,7 +27,7 @@ function insertQuestion(newQuestion) {
   });
 }
 
-function upvoteQuestion(id) {
+export function upvoteQuestion(id) {
   return new Promise((resolve, reject) => {
     helper.mustBeInArray(questions, parseInt(id, 10))
       .then((question) => {
@@ -48,7 +48,7 @@ function upvoteQuestion(id) {
   });
 }
 
-function downvoteQuestion(id) {
+export function downvoteQuestion(id, newQuestion) {
   return new Promise((resolve, reject) => {
     helper.mustBeInArray(questions, parseInt(id, 10))
       .then((question) => {
@@ -60,7 +60,7 @@ function downvoteQuestion(id) {
           updatedOn: helper.newDate(),
         };
         questions[index] = {
-          ...newId, ...date, ...votes,
+          ...newId, ...date, ...newQuestion, ...votes,
         };
         helper.writeJSONFile(filename, questions);
         resolve(questions[index]);
@@ -68,9 +68,3 @@ function downvoteQuestion(id) {
       .catch(err => reject(err));
   });
 }
-
-module.exports = {
-  insertQuestion,
-  upvoteQuestion,
-  downvoteQuestion,
-};

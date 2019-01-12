@@ -1,6 +1,4 @@
-const fs = require('fs');
-
-// const logger = require('../lib/logger');
+import fs from 'fs';
 
 const getNewId = (array) => {
   if (array.length > 0) {
@@ -46,7 +44,7 @@ function checkFieldsPost(fields, required) {
   };
 }
 
-module.exports = {
+export {
   getNewId,
   newDate,
   mustBeInArray,

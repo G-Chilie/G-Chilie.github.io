@@ -1,23 +1,31 @@
 'use strict';
 
-var express = require('express');
+var _express = require('express');
 
-var meetupModel = require('../models/meetup');
+var _express2 = _interopRequireDefault(_express);
 
-var helper = require('../lib/helper');
+var _meetup = require('../models/meetup');
 
-var router = express.Router();
+var _meetup2 = _interopRequireDefault(_meetup);
+
+var _helper = require('../lib/helper');
+
+var _helper2 = _interopRequireDefault(_helper);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var router = _express2.default.Router();
 
 router.post('/', async function (req, res) {
   var required = ['title', 'location', 'happeningOn', 'tags', 'images'];
-  var validated = helper.checkFieldsPost(req.body, required);
+  var validated = _helper2.default.checkFieldsPost(req.body, required);
   if (validated.status === 400) {
     res.json({
       status: validated.status,
       message: validated.message
     });
   } else {
-    await meetupModel.insertMeetup(req.body).then(function (meetup) {
+    await _meetup2.default.insertMeetup(req.body).then(function (meetup) {
       res.json({
         status: 201,
         data: [meetup]
@@ -32,7 +40,7 @@ router.post('/', async function (req, res) {
 });
 
 router.get('/upcoming', async function (req, res) {
-  await meetupModel.getUpcomingMeetups().then(function (meetups) {
+  await _meetup2.default.getUpcomingMeetups().then(function (meetups) {
     return res.json({
       status: 200,
       data: meetups
@@ -55,7 +63,7 @@ router.get('/upcoming', async function (req, res) {
 router.get('/:id', async function (req, res) {
   var id = req.params.id;
 
-  await meetupModel.getMeetup(id).then(function (meetup) {
+  await _meetup2.default.getMeetup(id).then(function (meetup) {
     return res.json({
       status: 200,
       data: [meetup]
@@ -76,7 +84,7 @@ router.get('/:id', async function (req, res) {
 });
 
 router.get('/', async function (req, res) {
-  await meetupModel.getAllMeetups().then(function (meetups) {
+  await _meetup2.default.getAllMeetups().then(function (meetups) {
     return res.json({
       status: 200,
       data: meetups
@@ -92,7 +100,7 @@ router.get('/', async function (req, res) {
 router.post('/:id/rsvps', async function (req, res) {
   var id = req.params.id;
 
-  await meetupModel.rsvpMeetup(id).then(function (rsvp) {
+  await _meetup2.default.rsvpMeetup(id).then(function (rsvp) {
     res.json({
       status: 201,
       data: [rsvp]

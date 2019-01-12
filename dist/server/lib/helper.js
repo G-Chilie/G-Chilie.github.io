@@ -1,8 +1,15 @@
 'use strict';
 
-var fs = require('fs');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.checkFieldsPost = exports.isInt = exports.writeJSONFile = exports.mustBeInArray = exports.newDate = exports.getNewId = undefined;
 
-// const logger = require('../lib/logger');
+var _fs = require('fs');
+
+var _fs2 = _interopRequireDefault(_fs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var getNewId = function getNewId(array) {
   if (array.length > 0) {
@@ -30,7 +37,7 @@ var mustBeInArray = function mustBeInArray(array, id) {
 };
 
 var writeJSONFile = function writeJSONFile(filename, content) {
-  fs.writeFileSync(filename, JSON.stringify(content));
+  _fs2.default.writeFileSync(filename, JSON.stringify(content));
 };
 
 var isInt = function isInt(id) {
@@ -76,11 +83,9 @@ function checkFieldsPost(fields, required) {
   };
 }
 
-module.exports = {
-  getNewId: getNewId,
-  newDate: newDate,
-  mustBeInArray: mustBeInArray,
-  writeJSONFile: writeJSONFile,
-  isInt: isInt,
-  checkFieldsPost: checkFieldsPost
-};
+exports.getNewId = getNewId;
+exports.newDate = newDate;
+exports.mustBeInArray = mustBeInArray;
+exports.writeJSONFile = writeJSONFile;
+exports.isInt = isInt;
+exports.checkFieldsPost = checkFieldsPost;

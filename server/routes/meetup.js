@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 
-const meetupModel = require('../models/meetup');
+import meetupModel from '../models/meetup';
 
-const helper = require('../lib/helper');
+import helper from '../lib/helper';
 
 const router = express.Router();
 

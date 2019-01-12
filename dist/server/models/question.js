@@ -1,10 +1,17 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var path = require('path');
+exports.insertQuestion = insertQuestion;
+exports.upvoteQuestion = upvoteQuestion;
+exports.downvoteQuestion = downvoteQuestion;
+var path = require('path'); // inport path 'path'
 
-var questions = require('../data/question.json');
+var questions = require('../data/question.json'); // import from 
 
 var helper = require('../lib/helper.js');
 
@@ -51,7 +58,7 @@ function upvoteQuestion(id) {
   });
 }
 
-function downvoteQuestion(id) {
+function downvoteQuestion(id, newQuestion) {
   return new Promise(function (resolve, reject) {
     helper.mustBeInArray(questions, parseInt(id, 10)).then(function (question) {
       var index = questions.findIndex(function (q) {
@@ -63,7 +70,7 @@ function downvoteQuestion(id) {
         createdOn: question.createdOn,
         updatedOn: helper.newDate()
       };
-      questions[index] = _extends({}, newId, date, votes);
+      questions[index] = _extends({}, newId, date, newQuestion, votes);
       helper.writeJSONFile(filename, questions);
       resolve(questions[index]);
     }).catch(function (err) {
@@ -71,9 +78,3 @@ function downvoteQuestion(id) {
     });
   });
 }
-
-module.exports = {
-  insertQuestion: insertQuestion,
-  upvoteQuestion: upvoteQuestion,
-  downvoteQuestion: downvoteQuestion
-};
